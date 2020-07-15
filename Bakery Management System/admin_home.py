@@ -35,7 +35,7 @@ class win1:
         
         self.bakery_icon=ImageTk.PhotoImage(file="Pics\\Bakery1.jpg")
         self.home_icon=ImageTk.PhotoImage(file="Pics\\user_btn1.png")
-        self.Manage_Emp=ImageTk.PhotoImage(file="Pics\\Manage_Emp.png")
+        self.Manage_Emp1=ImageTk.PhotoImage(file="Pics\\Manage_Emp.png")
         self.Manage_Admin1=ImageTk.PhotoImage(file="Pics\\Manage_admin.jpg")
         self.items_icon=ImageTk.PhotoImage(file="Pics\\user_btn2.png")
         self.exit_icon=ImageTk.PhotoImage(file="Pics\\user_btn4.jpg")
@@ -102,7 +102,7 @@ class win1:
         F25.place(x=0,y=532,width=130,height=133)
 
         btn_home = Button(F21,image= self.home_icon,bg=bg_color,relief=RAISED,width =115,height=120,command=self.home).place(x=0,y=60,anchor="w")
-        btn_Emp = Button(F22,image= self.Manage_Emp,bg=bg_color,relief=RAISED,width =115,height=120,command=self.Manage_Emp ).place(x=0,y=60,anchor="w")
+        btn_Emp = Button(F22,image= self.Manage_Emp1,bg=bg_color,relief=RAISED,width =115,height=120,command=self.Manage_Emp ).place(x=0,y=60,anchor="w")
         btn_admin = Button(F23,relief=RAISED,bg=bg_color,image=self.Manage_Admin1,width =115,height=120,command=self.Manage_Admin ).place(x=0,y=60,anchor="w")
         btn_view_items = Button(F24,relief=RAISED,image=self.items_icon,bg=bg_color,width =115,height=120, command=self.view_all).place(x=0,y=60,anchor="w")
         btn_Exit = Button(F25,relief=RAISED,bg=bg_color,image=self.exit_icon,width =115,height=120, command=self.Exit).place(x=0,y=60,anchor="w")
