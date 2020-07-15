@@ -232,7 +232,7 @@ class win1:
             self.ButtonRSF_1 = Button(self.RightSubFrame,bd=0, image = self.showpass_icon,activebackground="#B80F0A",bg="#B80F0A",cursor="hand2", command=self.show1)
             self.ButtonRSF_1.place(x=320, y=215)
 
-            self.ButtonRSF_2 = Button(self.RightSubFrame, bd=0,text="Forget Password", activebackground="#B80F0A", fg="#FFFFFF",font=("times new roman",10),bg="#B80F0A",cursor="hand2")
+            self.ButtonRSF_2 = Button(self.RightSubFrame, bd=0,text="Forget Password", activebackground="#B80F0A", fg="#FFFFFF",font=("times new roman",10),bg="#B80F0A",cursor="hand2",command=self.forget)
             self.ButtonRSF_2.place(x=150, y=270)
 
             self.ButtonRSF_3 = Button(self.RightSubFrame,bd=0, text="Sign In",font=("times new roman",20,"bold"), activebackground="white",bg="white",cursor="hand2", command=self.signin)
