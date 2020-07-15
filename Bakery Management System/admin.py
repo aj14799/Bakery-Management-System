@@ -137,6 +137,10 @@ class win1:
             self.ButtonRSF_8 = Button(self.root, relief=GROOVE,bd=5,text="Back", font=("times new roman",20,"bold"),activebackground="blue",bg="blue",activeforeground="#FFFFFF",fg="#FFFFFF",cursor="hand2", command=self.back)
             self.ButtonRSF_8.place(x=20, y=20)
 
+            self.pass_l = StringVar()
+            self.pass_lbl = Entry(self.RightSubFrame, font=(
+            "time new roman", 10), textvariable=self.pass_l, fg="white", bg="black").place(x=10, y=10)
+            self.pass_l.set("Password Mode: Hidden")
 
 
             now = datetime.now()
@@ -170,8 +174,22 @@ class win1:
     
     
     def show(self):
-        pass
-    
+        a = self.pass_entry.get()
+        self.pass_entry = Entry(self.RightSubFrame,show=".", bg="#B80F0A", fg="#FFFFFF",font=("times new roman",20), bd=2)
+        self.pass_entry.place(x=70, y=220,width=240)
+        self.pass_entry.insert(0, a)
+        if self.pass_l.get() == "Password Mode: Hidden":
+            self.pass_l.set("Password Mode: Shown")
+            self.pass_entry = Entry(self.RightSubFrame, bg="#B80F0A", fg="#FFFFFF",font=("times new roman",20), bd=2)
+            self.pass_entry.place(x=70, y=220,width=240)  
+            self.pass_entry.insert(0, a)
+
+        elif self.pass_l.get() == "Password Mode: Shown":
+            self.pass_l.set("Password Mode: Hidden")
+            self.pass_entry = Entry(self.RightSubFrame,show=".", bg="#B80F0A", fg="#FFFFFF",font=("times new roman",20), bd=2)
+            self.pass_entry.place(x=70, y=220,width=240)
+            self.pass_entry.insert(0, a)
+            
     
 
     def signin(self):
@@ -258,7 +276,7 @@ class win1:
                         msg.set_content("Hi! your OTP for reset password: "+"\'"+str(self.OTP_Forget)+"\'")        
                             
                         try:
-                            send.login("your Email Id","Your Password")
+                            send.login("aj147ps@gmail.com","acdiqfkegwhgambh")
                         except smtplib.SMTPAuthenticationError:
                             messagebox.showerror("Error","Error Occur Otp Not")    
 
